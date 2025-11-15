@@ -19,3 +19,11 @@ title: {
             type: String, 
             required: true
         },
+        duration: {
+            type: Number, 
+            required: true
+        },
+        views: {
+            type: Number,
+            default: 0
+        },
