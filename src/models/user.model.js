@@ -29,4 +29,4 @@ const userSchema = new Schema({
         type: String, // cloudinary url
     },
     watchHistory: {
-        type:}
+        type: Schema.Types.ObjectId,
