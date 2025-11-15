@@ -28,5 +28,13 @@ const userSchema = new Schema({
     coverImage: {
         type: String, // cloudinary url
     },
-    watchHistory: {
+    watchHistory:[ 
+        {
         type: Schema.Types.ObjectId,
+        ref:"vedio"
+    }
+    ],
+    password: {
+        type: String,
+         required: true,
+    },
