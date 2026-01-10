@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChaiProject | Build, Ship, Grow</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Cabin:wght@400;500;600&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="./styles.css" />
+</head>
+<body>
+  <div class="page-bg">
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+  </div>
+
+  <header class="shell top-nav">
+    <div class="brand">ChaiProject</div>
+    <nav class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#stories">Stories</a>
+      <a class="pill" href="#cta">Get Started</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="shell hero">
+      <div class="hero-copy">
+        <p class="eyebrow">Launch-ready backend + sharp UI</p>
+        <h1>Ship a standout video platform without the dull scaffolding.</h1>
+        <p class="lede">
+          Opinionated defaults, secure auth, and smooth uploads—paired with a bold, conversion-focused interface so your
+          product looks premium on day one.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="#cta">Start free</a>
+          <a class="btn ghost" href="#features">See the stack</a>
+        </div>
+        <div class="stats">
+          <div class="stat-card">
+            <span class="stat-value">99.9%</span>
+            <span class="stat-label">Uptime-ready blueprint</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">10 min</span>
+            <span class="stat-label">From clone to deploy</span>
+          </div>
+          <div class="stat-card">
+            <span class="stat-value">SOC2</span>
+            <span class="stat-label">Security first practices</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="card">
+          <div class="card-header">
+            <span class="chip">Uploads</span>
+            <span class="status good">Live</span>
+          </div>
+          <div class="bars">
+            <div class="bar">
+              <span>Thumbnail CDN</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 82%"></div></div>
+              <span class="bar-value">82%</span>
+            </div>
+            <div class="bar">
+              <span>Transcoding</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 64%"></div></div>
+              <span class="bar-value">64%</span>
+            </div>
+            <div class="bar">
+              <span>Delivery latency</span>
+              <div class="bar-track"><div class="bar-fill" style="width: 94%"></div></div>
+              <span class="bar-value">94%</span>
+            </div>
+          </div>
+          <div class="badge-row">
+            <span class="badge">JWT auth</span>
+            <span class="badge">Cloudinary CDN</span>
+            <span class="badge">Mongoose schema</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="features" class="shell section">
+      <div class="section-head">
+        <p class="eyebrow">What you get</p>
+        <h2>Secure backend, refined interface, instant credibility.</h2>
+      </div>
+      <div class="feature-grid">
+        <article class="feature">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 8.5a3.5 3.5 0 1 0 0 7 3.5 3.5 0 0 0 0-7Zm8.94 3.15-1.62-.6a7.34 7.34 0 0 0-.44-1.07l.77-1.6-1.4-1.4-1.6.77c-.34-.19-.7-.34-1.07-.44l-.6-1.62h-1.98l-.6 1.62c-.37.1-.73.25-1.07.44l-1.6-.77-1.4 1.4.77 1.6c-.19.34-.34.7-.44 1.07l-1.62.6v1.98l1.62.6c.1.37.25.73.44 1.07l-.77 1.6 1.4 1.4 1.6-.77c.34.19.7.34 1.07.44l.6 1.62h1.98l.6-1.62c.37-.1.73-.25 1.07-.44l1.6.77 1.4-1.4-.77-1.6c.19-.34.34-.7.44-1.07l1.62-.6v-1.98Z"
+              />
+            </svg>
+          </div>
+          <h3>Production-grade Express</h3>
+          <p>Hardened middleware, CORS, cookies, and ready-to-scale routing so you stay focused on product logic.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M17.5 10a4 4 0 0 0-7.8-1.2A3.5 3.5 0 0 0 6 12.5a3.5 3.5 0 0 0 3.5 3.5h8a2.5 2.5 0 0 0 0-5H17.5Z"
+              />
+              <path fill="currentColor" d="M9.5 16.5a3.5 3.5 0 0 0 0-7 3.5 3.5 0 0 0 0 7Z" opacity="0.4" />
+            </svg>
+          </div>
+          <h3>Cloud media pipeline</h3>
+          <p>Cloudinary integration with upload flows and optimized delivery that keeps your video experience fast.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path
+                fill="currentColor"
+                d="M12 3 5 6v6c0 4 3 6.5 7 9 4-2.5 7-5 7-9V6l-7-3Z"
+                opacity="0.5"
+              />
+              <path
+                fill="currentColor"
+                d="M9.5 12.5a2.5 2.5 0 1 1 5 0c0 1.3-.8 2.2-1.75 2.6v1.4a.75.75 0 0 1-1.5 0v-1.4c-.95-.4-1.75-1.3-1.75-2.6Z"
+              />
+            </svg>
+          </div>
+          <h3>Auth that feels premium</h3>
+          <p>JWT sessions, hashed credentials, and UI states that convey trust from the first visit.</p>
+        </article>
+        <article class="feature">
+          <div class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path fill="currentColor" d="M5 5.5a.5.5 0 0 0-1 0v13a.5.5 0 0 0 1 0v-13Z" />
+              <path
+                fill="currentColor"
+                d="M8.5 11a.5.5 0 0 0-1 0v7.5a.5.5 0 0 0 1 0V11Zm3.5-2a.5.5 0 0 0-1 0v9.5a.5.5 0 0 0 1 0V9Zm3.5 2a.5.5 0 0 0-1 0v7.5a.5.5 0 0 0 1 0V11Zm3.5-5a.5.5 0 0 0-1 0v12.5a.5.5 0 0 0 1 0V6Z"
+              />
+            </svg>
+          </div>
+          <h3>Insightful by default</h3>
+          <p>Analytics-ready structure plus delightful UI badges to spotlight performance and reliability.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow" class="shell section ribbon">
+      <div class="section-head">
+        <p class="eyebrow">Flow</p>
+        <h2>Ship in three decisive moves.</h2>
+      </div>
+      <div class="steps">
+        <div class="step">
+          <div class="step-number">1</div>
+          <div>
+            <h3>Clone + configure</h3>
+            <p>Drop your keys in .env and light up Mongo in seconds. The guardrails keep you on track.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">2</div>
+          <div>
+            <h3>Design-forward tweaks</h3>
+            <p>Adjust palette and copy in a single stylesheet. The layout is already conversion-focused.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-number">3</div>
+          <div>
+            <h3>Deploy with confidence</h3>
+            <p>Statically served UI on top of an API with sane defaults. Go live without fighting boilerplate.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="stories" class="shell section">
+      <div class="section-head">
+        <p class="eyebrow">Proof</p>
+        <h2>Teams already look sharper with ChaiProject.</h2>
+      </div>
+      <div class="testimonial">
+        <div>
+          <p class="quote">
+            “We swapped our rough prototype for this stack and had a polished launch page plus secure API in under an
+            afternoon.”
+          </p>
+          <p class="attribution">Mira Patel, Product Lead</p>
+        </div>
+        <div class="mini-card">
+          <div class="mini-top">
+            <span class="chip">Traffic week 1</span>
+            <span class="status good">+38%</span>
+          </div>
+          <div class="mini-metric">
+            <span>Conversion lift</span>
+            <span class="stat-value">+22%</span>
+          </div>
+          <div class="mini-metric">
+            <span>Support tickets</span>
+            <span class="stat-value">-41%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="cta" class="shell section cta">
+      <div>
+        <p class="eyebrow">Ready to move</p>
+        <h2>Give your video product a premium first impression.</h2>
+        <p class="lede">One command to start, one stylesheet to brand it yours. No dull starter templates.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn primary" href="mailto:hello@chaiproject.test">Book a quick handoff</a>
+        <a class="btn ghost" href="#top">View docs</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="shell footer">
+    <div class="brand">ChaiProject</div>
+    <div class="footer-links">
+      <a href="#features">Features</a>
+      <a href="#workflow">Workflow</a>
+      <a href="#cta">Contact</a>
+    </div>
+    <p class="tiny">Built with Express, MongoDB, Cloudinary, and intent.</p>
+  </footer>
+</body>
+</html>
