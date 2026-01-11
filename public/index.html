@@ -88,6 +88,91 @@
       </div>
     </section>
 
+    <section id="diagnostics" class="shell section">
+      <div class="section-head">
+        <p class="eyebrow">Live ops</p>
+        <h2>Operational guardrails baked in.</h2>
+      </div>
+      <div class="diag-grid">
+        <article class="diag-card">
+          <div class="diag-top">
+            <span class="chip">API health</span>
+            <span class="pulse good">● Live</span>
+          </div>
+          <div class="diag-metric">
+            <span>Median latency</span>
+            <span class="stat-value">118 ms</span>
+          </div>
+          <div class="diag-metric">
+            <span>Error budget</span>
+            <span class="stat-value">99.9% SLA</span>
+          </div>
+          <p class="diag-note">Pre-wired CORS, cookies, and JWT keep auth stable across clients.</p>
+        </article>
+        <article class="diag-card">
+          <div class="diag-top">
+            <span class="chip">Media path</span>
+            <span class="pulse good">● Optimized</span>
+          </div>
+          <div class="diag-metric">
+            <span>Upload success</span>
+            <span class="stat-value">98.4%</span>
+          </div>
+          <div class="diag-metric">
+            <span>Edge cache hit</span>
+            <span class="stat-value">92%</span>
+          </div>
+          <p class="diag-note">Cloudinary CDN defaults plus sensible file-size limits baked into middleware.</p>
+        </article>
+        <article class="diag-card">
+          <div class="diag-top">
+            <span class="chip">Data layer</span>
+            <span class="pulse good">● Hardened</span>
+          </div>
+          <div class="diag-metric">
+            <span>Replica ready</span>
+            <span class="stat-value">Yes</span>
+          </div>
+          <div class="diag-metric">
+            <span>Schema checks</span>
+            <span class="stat-value">Pass</span>
+          </div>
+          <p class="diag-note">Mongoose models with validation keep user and video data consistent.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="workflow-plus" class="shell section ribbon">
+      <div class="section-head">
+        <p class="eyebrow">Quick actions</p>
+        <h2>Launch faster with ready-to-run commands.</h2>
+      </div>
+      <div class="actions">
+        <div class="action">
+          <div>
+            <h3>Start dev server</h3>
+            <p class="muted">Boot Express with hot reload and your .env keys.</p>
+          </div>
+          <button class="btn ghost copy-btn" data-copy="npm run dev">Copy: npm run dev</button>
+        </div>
+        <div class="action">
+          <div>
+            <h3>Seed sample data</h3>
+            <p class="muted">Add baseline users and video metadata to move faster in demos.</p>
+          </div>
+          <button class="btn ghost copy-btn" data-copy="node scripts/seed.js">Copy seed script</button>
+        </div>
+        <div class="action">
+          <div>
+            <h3>Deploy preview</h3>
+            <p class="muted">Bundle the static site and run your API on the same origin.</p>
+          </div>
+          <button class="btn ghost copy-btn" data-copy="npm run build && npm run start">Copy deploy step</button>
+        </div>
+        <p class="tiny action-hint" id="copy-hint">Ready when you are.</p>
+      </div>
+    </section>
+
     <section id="features" class="shell section">
       <div class="section-head">
         <p class="eyebrow">What you get</p>
@@ -212,6 +297,38 @@
       </div>
     </section>
 
+    <section id="faq" class="shell section">
+      <div class="section-head">
+        <p class="eyebrow">Answers</p>
+        <h2>Everything you need to know before you ship.</h2>
+      </div>
+      <div class="faq">
+        <button class="faq-item" aria-expanded="false">
+          <span>Can I swap Cloudinary for another storage?</span>
+          <span class="chevron">▼</span>
+        </button>
+        <div class="faq-panel" hidden>
+          <p>You can. Wrap the upload service in the utils folder and point the controller to your preferred SDK.</p>
+        </div>
+
+        <button class="faq-item" aria-expanded="false">
+          <span>Is auth session-based or token-based?</span>
+          <span class="chevron">▼</span>
+        </button>
+        <div class="faq-panel" hidden>
+          <p>JWT tokens with secure cookies by default. Swap to session storage if your stack prefers it.</p>
+        </div>
+
+        <button class="faq-item" aria-expanded="false">
+          <span>How do I brand the UI?</span>
+          <span class="chevron">▼</span>
+        </button>
+        <div class="faq-panel" hidden>
+          <p>Edit the CSS variables at the top of styles.css for instant palette, glow, and accent changes.</p>
+        </div>
+      </div>
+    </section>
+
     <section id="cta" class="shell section cta">
       <div>
         <p class="eyebrow">Ready to move</p>
@@ -222,6 +339,35 @@
         <a class="btn primary" href="mailto:hello@chaiproject.test">Book a quick handoff</a>
         <a class="btn ghost" href="#top">View docs</a>
       </div>
+    </section>
+
+    <section id="contact" class="shell section">
+      <div class="section-head">
+        <p class="eyebrow">Stay in the loop</p>
+        <h2>Request onboarding or drop your launch date.</h2>
+      </div>
+      <form class="contact" id="contact-form" novalidate>
+        <div class="field">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" placeholder="Aditi Sharma" required />
+        </div>
+        <div class="field">
+          <label for="email">Work email</label>
+          <input id="email" name="email" type="email" placeholder="you@startup.com" required />
+        </div>
+        <div class="field">
+          <label for="date">Target launch</label>
+          <input id="date" name="date" type="date" />
+        </div>
+        <div class="field full">
+          <label for="notes">What do you need?</label>
+          <textarea id="notes" name="notes" rows="3" placeholder="MVP handoff, auth review, or design polish?"></textarea>
+        </div>
+        <div class="contact-actions">
+          <button type="submit" class="btn primary">Send request</button>
+          <p class="tiny" id="form-status">No spam. We reply within one business day.</p>
+        </div>
+      </form>
     </section>
   </main>
 
@@ -234,5 +380,61 @@
     </div>
     <p class="tiny">Built with Express, MongoDB, Cloudinary, and intent.</p>
   </footer>
+
+  <button class="to-top" id="to-top" aria-label="Back to top">↑</button>
+
+  <script>
+    const copyButtons = document.querySelectorAll('.copy-btn');
+    const copyHint = document.getElementById('copy-hint');
+    copyButtons.forEach((btn) => {
+      btn.addEventListener('click', async () => {
+        const text = btn.dataset.copy;
+        try {
+          await navigator.clipboard.writeText(text);
+          copyHint.textContent = `Copied: ${text}`;
+          copyHint.classList.add('visible');
+          setTimeout(() => copyHint.classList.remove('visible'), 1600);
+        } catch (err) {
+          copyHint.textContent = 'Clipboard blocked, try Ctrl+C.';
+          copyHint.classList.add('visible');
+          setTimeout(() => copyHint.classList.remove('visible'), 1600);
+        }
+      });
+    });
+
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach((btn) => {
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', (!expanded).toString());
+        const panel = btn.nextElementSibling;
+        panel.hidden = expanded;
+      });
+    });
+
+    const toTop = document.getElementById('to-top');
+    window.addEventListener('scroll', () => {
+      toTop.classList.toggle('show', window.scrollY > 260);
+    });
+    toTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    const form = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = form.name.value.trim();
+      const email = form.email.value.trim();
+      if (!name || !email || !email.includes('@')) {
+        status.textContent = 'Add your name and a valid email to send.';
+        status.classList.add('error');
+        return;
+      }
+      status.textContent = 'Thanks! We will reach out shortly.';
+      status.classList.remove('error');
+      form.reset();
+    });
+  </script>
 </body>
 </html>
