@@ -279,6 +279,10 @@ body {
   padding: 60px 0 20px;
 }
 
+.muted {
+  color: var(--muted);
+}
+
 .section-head h2 {
   margin: 6px 0 16px;
   font-size: clamp(1.8rem, 3vw, 2.4rem);
@@ -325,11 +329,90 @@ body {
   margin: 0;
 }
 
+.diag-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.diag-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 16px;
+  border-radius: 14px;
+  display: grid;
+  gap: 8px;
+}
+
+.diag-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.pulse {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #8df4d3;
+  font-weight: 600;
+}
+
+.pulse.good::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #8df4d3;
+  box-shadow: 0 0 0 6px rgba(141, 244, 211, 0.18);
+}
+
+.diag-metric {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted);
+}
+
+.diag-note {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
 .ribbon {
   background: linear-gradient(120deg, rgba(94, 240, 196, 0.08), rgba(255, 179, 71, 0.07));
   border: 1px solid var(--line);
   border-radius: 18px;
   padding: 40px 28px;
+}
+
+.actions {
+  display: grid;
+  gap: 12px;
+  margin-top: 14px;
+}
+
+.action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 14px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  flex-wrap: wrap;
+}
+
+.action-hint {
+  margin: 0;
+  color: var(--muted);
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.action-hint.visible {
+  opacity: 1;
 }
 
 .steps {
@@ -407,6 +490,125 @@ body {
   color: var(--muted);
 }
 
+.faq {
+  display: grid;
+  gap: 10px;
+}
+
+.faq-item {
+  width: 100%;
+  text-align: left;
+  padding: 14px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--ink);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.faq-item .chevron {
+  transition: transform 0.18s ease;
+  display: inline-block;
+}
+
+.faq-item[aria-expanded="true"] .chevron {
+  transform: rotate(180deg);
+}
+
+.faq-panel {
+  margin: -4px 4px 4px;
+  padding: 10px 12px 14px;
+  border-left: 2px solid rgba(94, 240, 196, 0.6);
+  color: var(--muted);
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 0 0 10px 10px;
+}
+
+.contact {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: 16px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 14px;
+}
+
+.field {
+  display: grid;
+  gap: 6px;
+}
+
+.field.full {
+  grid-column: 1 / -1;
+}
+
+.field label {
+  font-weight: 600;
+  color: var(--ink);
+}
+
+.field input,
+.field textarea {
+  width: 100%;
+  padding: 12px 10px;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--ink);
+  font-size: 1rem;
+}
+
+.field input:focus,
+.field textarea:focus {
+  outline: 2px solid rgba(94, 240, 196, 0.5);
+}
+
+.contact-actions {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+#form-status {
+  margin: 0;
+  color: var(--muted);
+}
+
+#form-status.error {
+  color: #ffb347;
+}
+
+.to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--ink);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  box-shadow: var(--shadow);
+}
+
+.to-top.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .cta {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -464,5 +666,8 @@ body {
   }
   .nav-links {
     gap: 10px;
+  }
+  .action {
+    align-items: flex-start;
   }
 }
