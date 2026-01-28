@@ -3,15 +3,16 @@ import cors from 'cors';
 import cookieParser from 'cookie-parser';
 import apiRouter from './routes/index.js';
 import { notFound, errorHandler } from './middlewares/errorHandler.js';
+import { env } from './config/env.js';
 
 const app = express();
 
-app.use(
-    cors({
-        origin: process.env.CORS_URL,
-        credentials: true,
-    })
-);
+const corsOptions = {
+    origin: env.corsOrigins.length ? env.corsOrigins : true,
+    credentials: true,
+};
+
+app.use(cors(corsOptions));
 app.use(express.json({ limit: '16kb' }));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
